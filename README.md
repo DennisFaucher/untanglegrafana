@@ -20,7 +20,7 @@ In the Untangle web interface go to Config > Network > Advanced > Access Rules. 
 
 Move the rule up to the top and click Save.
 
-### Open Up Untangle PostgreSQL to Other Hosts
+### Open Up Untangle PostgreSQL Database to Other Hosts
 My Grafana server is separate from my Untangle appliance naturally. Although I could access PostgreSQL by ssh-ing into the Untangle appliance and typing "psql -U postgres",  typing "psql -U postgres -h untangle" got me nowhere. After some research, I learned that PostgreSQL is only acessible by localhost by default. Smart. One needs to edit two PostgreSQL files to allow access from other hosts - postgresql.conf and pg_hba.conf. In postgresql.conf change 'localhost' to '*' and in pg_bha_conf add the a line that points to your internal network like "host all all 192.168.1.0/24 trust". I found [this guide](https://www.bigbinary.com/blog/configure-postgresql-to-allow-remote-connection) helpful.
 
 ````bash
