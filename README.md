@@ -52,8 +52,8 @@ should work (as long as you use the correct hostname/IP address after -h).
 
 ![Screen Shot 2021-07-09 at 6 31 41 PM](https://user-images.githubusercontent.com/9034190/125141765-f22a7980-e0e3-11eb-84a5-d864f48e51ff.png)
 
-From the Grafana wen interface, choose Configuration > Data Sources > Add Data Source > PostgreSQL
-Give your data source a name, type the IP address of your host and :5432 in the Host field, type uvm for the Database, Postgres for the User and select your PostgreSQL version from the Version drop down. If you are unsure of the version, you can type this command into psql:
+From the Grafana web interface, choose Configuration > Data Sources > Add Data Source > PostgreSQL
+Give your data source a name, type the IP address of your host and :5432 in the Host field, type uvm for the Database, Postgres for the User and select your PostgreSQL version from the Version drop down then click Save & Test. If you are unsure of the version, you can type this command into psql:
 
 ````sql
 uvm=# select version();
@@ -62,5 +62,11 @@ uvm=# select version();
  PostgreSQL 11.11 (Debian 11.11-0+deb10u1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
 (1 row)
 ````
+
+### Add a Grafana Panel for Untangle PostgreSQL
+
+![Screen Shot 2021-07-09 at 2 22 53 PM](https://user-images.githubusercontent.com/9034190/125142170-15095d80-e0e5-11eb-83f0-5b9b082a92b5.png)
+
+So, even though Grafana happily connected to the PostgreSQL on the Untangle appliance, I coudl not get any tables to show up in my Grafana panels. I have a feeling that Grafana does not like PostgreSQL schemas which Untangle uses heavily. (You can find the full Untangle PostgreSQL schema/table layout [here](https://wiki.untangle.com/index.php/Database_Schema). Through failing, and failing, and failing, and succeeding, I learned that I needed to manually enter the schema.tablename into the From filed of the new Grafana Panel. Once I did that, all the other fields became populated.
 
 ## Thank You
