@@ -1,4 +1,3 @@
-![Screen Shot 2021-07-09 at 6 23 16 PM](https://user-images.githubusercontent.com/9034190/125141333-c064e300-e0e2-11eb-9c89-44167fe8e98a.png)
 # Untangle PostgreSQL Grafana Dashboards
 ![Screen Shot 2021-07-09 at 2 49 01 PM](https://user-images.githubusercontent.com/9034190/125123591-d794d800-e0c4-11eb-9645-17d2022ec1f1.png)
 
