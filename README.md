@@ -30,6 +30,14 @@ After editing these two files run the command
 ````bash
 systemctl restart postgresql
 ````
-to enable your changes
+to enable your changes. Now running the command
+````bash
+psql -U postgres -h untangle
+````
+should work (as long as you use the correct hostname/IP address after -h).
+
+### Add Untangle PostgreSQL as a Grafana Data Source
+
+
 
 ## Thank You
