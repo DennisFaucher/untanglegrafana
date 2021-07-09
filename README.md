@@ -67,6 +67,6 @@ uvm=# select version();
 
 ![Screen Shot 2021-07-09 at 2 22 53 PM](https://user-images.githubusercontent.com/9034190/125142170-15095d80-e0e5-11eb-83f0-5b9b082a92b5.png)
 
-So, even though Grafana happily connected to the PostgreSQL on the Untangle appliance, I coudl not get any tables to show up in my Grafana panels. I have a feeling that Grafana does not like PostgreSQL schemas which Untangle uses heavily. (You can find the full Untangle PostgreSQL schema/table layout [here](https://wiki.untangle.com/index.php/Database_Schema). Through failing, and failing, and failing, and succeeding, I learned that I needed to manually enter the schema.tablename into the From filed of the new Grafana Panel. Once I did that, all the other fields became populated.
+So, even though Grafana happily connected to the PostgreSQL on the Untangle appliance, I coudl not get any tables to show up in my Grafana panels. I have a feeling that Grafana does not like PostgreSQL schemas which Untangle uses heavily. (You can find the full Untangle PostgreSQL schema/table layout [here](https://wiki.untangle.com/index.php/Database_Schema). Through failing, and failing, and failing, and succeeding, I learned that I needed to manually enter the schema.tablename into the From filed of the new Grafana Panel. Once I did that, all the other fields became populated. In the example above, I wanted to graph intrusion_prevention_events, so I typed reports.intrusion_prevention_events. reports is the schema in this case.
 
 ## Thank You
