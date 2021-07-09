@@ -15,7 +15,7 @@ My Grafana server is separate from my Untangle appliance naturally. Although I c
 ````bash
 /etc/postgresql/11/main/postgresql.conf
 #listen_addresses = 'localhost'         # what IP address(es) to listen on;
-listen_addresses = '*'          # what IP address(es) to listen on;
+listen_addresses = '*'                  # what IP address(es) to listen on;
                                         # comma-separated list of addresses;
                                         # defaults to 'localhost'; use '*' for all
                                         # (change requires restart)
