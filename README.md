@@ -26,4 +26,10 @@ host    all             all             127.0.0.1/32            trust
 host    all             all             192.168.1.0/24            trust
 ````
 
+After editing these two files run the command
+````bash
+systemctl restart postgresql
+````
+to enable your changes
+
 ## Thank You
