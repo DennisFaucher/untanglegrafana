@@ -50,7 +50,7 @@ should work (as long as you use the correct hostname/IP address after -h).
 
 ### Add Untangle PostgreSQL as a Grafana Data Source
 
-![Screen Shot 2021-07-09 at 6 23 16 PM](https://user-images.githubusercontent.com/9034190/125141344-c6f35a80-e0e2-11eb-9712-f31f38fb43ae.png)
+![Screen Shot 2021-07-09 at 6 31 41 PM](https://user-images.githubusercontent.com/9034190/125141765-f22a7980-e0e3-11eb-84a5-d864f48e51ff.png)
 
 From the Grafana wen interface, choose Configuration > Data Sources > Add Data Source > PostgreSQL
 Give your data source a name, type the IP address of your host and :5432 in the Host field, type uvm for the Database, Postgres for the User and select your PostgreSQL version from the Version drop down. If you are unsure of the version, you can type this command into psql:
