@@ -71,6 +71,8 @@ So, even though Grafana happily connected to the PostgreSQL on the Untangle appl
 
 My initial goal was to duplicate the table of blocked intrusion prevention events from the Untangle dashboard. Unfortunately, Grafana picked up the MSG field as a metric to be filtered on and didn not even pick up source_ip and destination_ip. I'm sure if I had more experience with Grafana <> PostgreSQL I might be able to fix that, but I moved on. I decided to create a line graph of number of events rather than a table of events. If the graph spiked in Grafana, I could drill down in the Untangle interface for specifics. I eventually landed on graphing a count of evnets over 5 minute intervals.
 
+![Time Shift](https://user-images.githubusercontent.com/9034190/125146189-94515e00-e0f2-11eb-8fed-0e92a0c1f08a.png)
+
 My next problem to solve was that my graph time on the X axis was 4 hours behind. Very odd as my Grafana Server, my Untangle Appliance, and my laptop are all set to the same time and time zone. Who knows? After a little Googling, I learned that I could shift time in a PostgreSQL statement with "time_stamp + interval '4' hour". I added this format to the SELECT and the WHERE and Bob's Your Uncle, the graph lined up with reality.
 
 ## Thank You
