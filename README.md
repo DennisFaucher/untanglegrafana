@@ -53,7 +53,7 @@ should work (as long as you use the correct hostname/IP address after -h).
 ![Screen Shot 2021-07-09 at 6 31 41 PM](https://user-images.githubusercontent.com/9034190/125141765-f22a7980-e0e3-11eb-84a5-d864f48e51ff.png)
 
 From the Grafana web interface, choose Configuration > Data Sources > Add Data Source > PostgreSQL
-Give your data source a name, type the IP address of your host and :5432 in the Host field, type uvm for the Database, Postgres for the User and select your PostgreSQL version from the Version drop down then click Save & Test. If you are unsure of the version, you can type this command into psql:
+Give your data source a name, type the IP address of your host and :5432 in the Host field, type uvm for the Database, postgres for the User and select your PostgreSQL version from the Version drop down then click Save & Test. If you are unsure of the version, you can type this command into psql:
 
 ````sql
 uvm=# select version();
