@@ -73,6 +73,7 @@ My initial goal was to duplicate the table of blocked intrusion prevention event
 
 ![Time Shift](https://user-images.githubusercontent.com/9034190/125146189-94515e00-e0f2-11eb-8fed-0e92a0c1f08a.png)
 
-My next problem to solve was that my graph time on the X axis was 4 hours behind. Very odd as my Grafana Server, my Untangle Appliance, and my laptop are all set to the same time and time zone. Who knows? After a little Googling, I learned that I could shift time in a PostgreSQL statement with "time_stamp + interval '4' hour". I added this format to the SELECT and the WHERE and Bob's Your Uncle, the graph lined up with reality.
+My next problem to solve was that my graph time on the X axis was 4 hours behind. Very odd as my Grafana Server, my Untangle Appliance, and my laptop are all set to the same time and time zone. Who knows? After a little Googling, I learned that I could shift time in a PostgreSQL statement with "time_stamp + interval '4' hour". I added this format to the SELECT and the WHERE and Bob's Your Uncle, the graph lined up with reality. I'm open to suggestions as to why this might have happened.
 
 ## Thank You
+Well, that's about it. Open up your PostgreSQL database to other hosts, add as a Grafana source, and type in the name of the table preceded by the schema name. Thank you for taking the time to read this post. I hope you found the post helpful and/or informative. I welcome your feedback.
